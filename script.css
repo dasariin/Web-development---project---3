@@ -1,0 +1,40 @@
+// Countdown Timer - Set to October 11, 2024 at 7:30 PM
+const eventDate = new Date("Oct 11, 2024 19:30:00").getTime();
+
+const timer = setInterval(function() {
+  const now = new Date().getTime();
+  const diff = eventDate - now;
+
+  const days = Math.floor(diff / (1000*60*60*24));
+  const hours = Math.floor((diff % (1000*60*60*24))/(1000*60*60));
+  const minutes = Math.floor((diff % (1000*60*60))/(1000*60));
+  const seconds = Math.floor((diff % (1000*60))/1000);
+
+  document.getElementById("days").innerText = days.toString().padStart(2, '0');
+  document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+  document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+  document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+  if(diff < 0){
+    clearInterval(timer);
+    document.getElementById("countdown").innerHTML = "<h3>Event Started! 🎊</h3>";
+  }
+}, 1000);
+
+// RSVP Form Handler
+document.getElementById("rsvpForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const guests = document.getElementById("guests").value;
+  
+  document.getElementById("rsvpMessage").innerHTML = 
+    `Thank you, ${name}! We've received your RSVP for ${guests} ${guests > 1 ? 'guests' : 'guest'}.`;
+  
+  e.target.reset();
+  
+  // Simulate sending data (in a real application, this would be an API call)
+  setTimeout(() => {
+    document.getElementById("rsvpMessage").innerHTML += "<br>A confirmation email has been sent to " + email;
+  }, 1000);
+});
