@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhavya's Birthday Bash</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bhavya's Birthday Bash 🎉</h1>
+    <p>Hosted by INDU | Join us for a night to remember</p>
+    <div class="countdown" id="countdown">
+      <div class="time-box"><span id="days">00</span><small>Days</small></div>
+      <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+      <div class="time-box"><span id="minutes">00</span><small>Minutes</small></div>
+      <div class="time-box"><span id="seconds">00</span><small>Seconds</small></div>
+    </div>
+  </header>
+
+  <section>
+    <h2 class="section-title">Event Details</h2>
+    <div class="details">
+      <div>
+        <i class="fa-solid fa-calendar-days"></i>
+        <h3>Date & Time</h3>
+        <p>11th October 2024 | 7:30 PM</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Venue</h3>
+        <p>Hyderabad Convention Center</p>
+        <a href="https://goo.gl/maps/example" target="_blank">View on Map</a>
+      </div>
+      <div>
+        <i class="fa-solid fa-info-circle"></i>
+        <h3>About the Event</h3>
+        <p>Celebrate Bhavya's special day with music, fun, food, and unforgettable memories.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h2 class="section-title">Memories from Last Year</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=500&q=80" alt="Party decoration">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=500&q=80" alt="Birthday cake">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=500&q=80" alt="Party guests">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1567942712661-82b9b407abbf?auto=format&fit=crop&w=500&q=80" alt="Celebration">
+      </div>
+    </div>
+  </section>
+
+  <section class="rsvp">
+    <h2 class="section-title">RSVP Now</h2>
+    <form id="rsvpForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <input type="number" id="guests" placeholder="Number of Guests" min="1" max="10" required>
+      <button type="submit">Confirm Attendance</button>
+    </form>
+    <p id="rsvpMessage"></p>
+  </section>
+
+  <footer>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p>&copy; 2024 Bhavya's Birthday Bash | Designed with ❤</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
